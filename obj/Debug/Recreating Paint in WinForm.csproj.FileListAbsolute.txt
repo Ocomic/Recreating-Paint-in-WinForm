@@ -1,0 +1,11 @@
+F:\Programme\Git\Recreating Paint in WinForm\bin\Debug\Recreating Paint in WinForm.exe.config
+F:\Programme\Git\Recreating Paint in WinForm\bin\Debug\Recreating Paint in WinForm.exe
+F:\Programme\Git\Recreating Paint in WinForm\bin\Debug\Recreating Paint in WinForm.pdb
+F:\Programme\Git\Recreating Paint in WinForm\obj\Debug\Recreating Paint in WinForm.csproj.AssemblyReference.cache
+F:\Programme\Git\Recreating Paint in WinForm\obj\Debug\Recreating Paint in WinForm.csproj.SuggestedBindingRedirects.cache
+F:\Programme\Git\Recreating Paint in WinForm\obj\Debug\Recreating_Paint_in_WinForm.Form1.resources
+F:\Programme\Git\Recreating Paint in WinForm\obj\Debug\Recreating_Paint_in_WinForm.Properties.Resources.resources
+F:\Programme\Git\Recreating Paint in WinForm\obj\Debug\Recreating Paint in WinForm.csproj.GenerateResource.cache
+F:\Programme\Git\Recreating Paint in WinForm\obj\Debug\Recreating Paint in WinForm.csproj.CoreCompileInputs.cache
+F:\Programme\Git\Recreating Paint in WinForm\obj\Debug\Recreating Paint in WinForm.exe
+F:\Programme\Git\Recreating Paint in WinForm\obj\Debug\Recreating Paint in WinForm.pdb
