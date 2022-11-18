@@ -73,9 +73,29 @@ namespace Recreating_Paint_in_WinForm.Properties {
         /// <summary>
         ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _3380386_eye_dropper_pipette_color_medical_icon {
+            get {
+                object obj = ResourceManager.GetObject("3380386_eye_dropper_pipette_color_medical_icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap _34165_paint_icon {
             get {
                 object obj = ResourceManager.GetObject("34165_paint_icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _3440910_ecommerce_find_magnifier_search_seo_icon {
+            get {
+                object obj = ResourceManager.GetObject("3440910_ecommerce_find_magnifier_search_seo_icon", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
