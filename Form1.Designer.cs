@@ -30,15 +30,15 @@
         {
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.viewToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.newToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.openToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.saveToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.viewToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tool_panel = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.btn_text = new System.Windows.Forms.Button();
             this.btn_magnifier = new System.Windows.Forms.Button();
             this.btn_pickcolor = new System.Windows.Forms.Button();
+            this.btn_text = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
             this.btn_eraser = new System.Windows.Forms.Button();
             this.btn_fill = new System.Windows.Forms.Button();
             this.btn_pencil = new System.Windows.Forms.Button();
@@ -51,12 +51,14 @@
             // menuStrip1
             // 
             this.menuStrip1.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.menuStrip1.ImageScalingSize = new System.Drawing.Size(24, 24);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.fileToolStripMenuItem,
             this.viewToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1198, 25);
+            this.menuStrip1.Padding = new System.Windows.Forms.Padding(4, 1, 0, 1);
+            this.menuStrip1.Size = new System.Drawing.Size(1198, 24);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -70,16 +72,8 @@
             this.fileToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.fileToolStripMenuItem.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
-            this.fileToolStripMenuItem.Size = new System.Drawing.Size(39, 21);
+            this.fileToolStripMenuItem.Size = new System.Drawing.Size(39, 22);
             this.fileToolStripMenuItem.Text = "File";
-            // 
-            // viewToolStripMenuItem
-            // 
-            this.viewToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.viewToolStripMenuItem.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.viewToolStripMenuItem.Name = "viewToolStripMenuItem";
-            this.viewToolStripMenuItem.Size = new System.Drawing.Size(47, 21);
-            this.viewToolStripMenuItem.Text = "View";
             // 
             // newToolStripMenuItem
             // 
@@ -99,6 +93,14 @@
             this.saveToolStripMenuItem1.Size = new System.Drawing.Size(108, 22);
             this.saveToolStripMenuItem1.Text = "Save";
             // 
+            // viewToolStripMenuItem
+            // 
+            this.viewToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.viewToolStripMenuItem.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.viewToolStripMenuItem.Name = "viewToolStripMenuItem";
+            this.viewToolStripMenuItem.Size = new System.Drawing.Size(47, 22);
+            this.viewToolStripMenuItem.Text = "View";
+            // 
             // tool_panel
             // 
             this.tool_panel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
@@ -110,36 +112,10 @@
             this.tool_panel.Controls.Add(this.btn_fill);
             this.tool_panel.Controls.Add(this.btn_pencil);
             this.tool_panel.Dock = System.Windows.Forms.DockStyle.Top;
-            this.tool_panel.Location = new System.Drawing.Point(0, 25);
+            this.tool_panel.Location = new System.Drawing.Point(0, 24);
             this.tool_panel.Name = "tool_panel";
             this.tool_panel.Size = new System.Drawing.Size(1198, 143);
             this.tool_panel.TabIndex = 1;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label1.Location = new System.Drawing.Point(352, 112);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(47, 20);
-            this.label1.TabIndex = 3;
-            this.label1.Text = "Tools";
-            // 
-            // btn_text
-            // 
-            this.btn_text.BackColor = System.Drawing.Color.Transparent;
-            this.btn_text.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btn_text.FlatAppearance.BorderSize = 0;
-            this.btn_text.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_text.Font = new System.Drawing.Font("Modern No. 20", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_text.ForeColor = System.Drawing.Color.White;
-            this.btn_text.Location = new System.Drawing.Point(408, 16);
-            this.btn_text.Name = "btn_text";
-            this.btn_text.Size = new System.Drawing.Size(40, 40);
-            this.btn_text.TabIndex = 4;
-            this.btn_text.Text = "A";
-            this.btn_text.UseVisualStyleBackColor = false;
             // 
             // btn_magnifier
             // 
@@ -166,6 +142,32 @@
             this.btn_pickcolor.Size = new System.Drawing.Size(40, 40);
             this.btn_pickcolor.TabIndex = 5;
             this.btn_pickcolor.UseVisualStyleBackColor = false;
+            // 
+            // btn_text
+            // 
+            this.btn_text.BackColor = System.Drawing.Color.Transparent;
+            this.btn_text.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btn_text.FlatAppearance.BorderSize = 0;
+            this.btn_text.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_text.Font = new System.Drawing.Font("Modern No. 20", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_text.ForeColor = System.Drawing.Color.White;
+            this.btn_text.Location = new System.Drawing.Point(408, 16);
+            this.btn_text.Name = "btn_text";
+            this.btn_text.Size = new System.Drawing.Size(40, 40);
+            this.btn_text.TabIndex = 4;
+            this.btn_text.Text = "A";
+            this.btn_text.UseVisualStyleBackColor = false;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.label1.Location = new System.Drawing.Point(352, 112);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(47, 20);
+            this.label1.TabIndex = 3;
+            this.label1.Text = "Tools";
             // 
             // btn_eraser
             // 
@@ -205,15 +207,19 @@
             this.btn_pencil.Size = new System.Drawing.Size(40, 40);
             this.btn_pencil.TabIndex = 0;
             this.btn_pencil.UseVisualStyleBackColor = false;
+            this.btn_pencil.Click += new System.EventHandler(this.btn_pencil_Click);
             // 
             // picture
             // 
             this.picture.BackColor = System.Drawing.Color.White;
             this.picture.Location = new System.Drawing.Point(8, 176);
             this.picture.Name = "picture";
-            this.picture.Size = new System.Drawing.Size(800, 600);
+            this.picture.Size = new System.Drawing.Size(915, 600);
             this.picture.TabIndex = 2;
             this.picture.TabStop = false;
+            this.picture.MouseDown += new System.Windows.Forms.MouseEventHandler(this.picture_MouseDown);
+            this.picture.MouseMove += new System.Windows.Forms.MouseEventHandler(this.picture_MouseMove);
+            this.picture.MouseUp += new System.Windows.Forms.MouseEventHandler(this.picture_MouseUp);
             // 
             // Form1
             // 
@@ -226,6 +232,7 @@
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "Form1";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
