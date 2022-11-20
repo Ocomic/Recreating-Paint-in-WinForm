@@ -35,6 +35,7 @@
             this.saveToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.viewToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tool_panel = new System.Windows.Forms.Panel();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.btn_magnifier = new System.Windows.Forms.Button();
             this.btn_pickcolor = new System.Windows.Forms.Button();
             this.btn_text = new System.Windows.Forms.Button();
@@ -43,9 +44,14 @@
             this.btn_fill = new System.Windows.Forms.Button();
             this.btn_pencil = new System.Windows.Forms.Button();
             this.picture = new System.Windows.Forms.PictureBox();
+            this.statusStrip1 = new System.Windows.Forms.StatusStrip();
+            this.coordinates = new System.Windows.Forms.ToolStripStatusLabel();
+            this.label2 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             this.tool_panel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picture)).BeginInit();
+            this.statusStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -104,6 +110,9 @@
             // tool_panel
             // 
             this.tool_panel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.tool_panel.Controls.Add(this.button1);
+            this.tool_panel.Controls.Add(this.label2);
+            this.tool_panel.Controls.Add(this.comboBox1);
             this.tool_panel.Controls.Add(this.btn_magnifier);
             this.tool_panel.Controls.Add(this.btn_pickcolor);
             this.tool_panel.Controls.Add(this.btn_text);
@@ -116,6 +125,24 @@
             this.tool_panel.Name = "tool_panel";
             this.tool_panel.Size = new System.Drawing.Size(1198, 143);
             this.tool_panel.TabIndex = 1;
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "1",
+            "10",
+            "25",
+            "50",
+            "100",
+            "200",
+            "500"});
+            this.comboBox1.Location = new System.Drawing.Point(496, 40);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(121, 21);
+            this.comboBox1.TabIndex = 7;
+            this.comboBox1.Text = "1";
+            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // btn_magnifier
             // 
@@ -181,6 +208,7 @@
             this.btn_eraser.Size = new System.Drawing.Size(40, 40);
             this.btn_eraser.TabIndex = 2;
             this.btn_eraser.UseVisualStyleBackColor = false;
+            this.btn_eraser.Click += new System.EventHandler(this.btn_eraser_Click);
             // 
             // btn_fill
             // 
@@ -221,12 +249,55 @@
             this.picture.MouseMove += new System.Windows.Forms.MouseEventHandler(this.picture_MouseMove);
             this.picture.MouseUp += new System.Windows.Forms.MouseEventHandler(this.picture_MouseUp);
             // 
+            // statusStrip1
+            // 
+            this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.coordinates});
+            this.statusStrip1.Location = new System.Drawing.Point(0, 857);
+            this.statusStrip1.Name = "statusStrip1";
+            this.statusStrip1.Size = new System.Drawing.Size(1198, 22);
+            this.statusStrip1.TabIndex = 3;
+            this.statusStrip1.Text = "statusStrip1";
+            // 
+            // coordinates
+            // 
+            this.coordinates.Name = "coordinates";
+            this.coordinates.Size = new System.Drawing.Size(21, 17);
+            this.coordinates.Text = "XY";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.label2.Location = new System.Drawing.Point(496, 16);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(44, 20);
+            this.label2.TabIndex = 8;
+            this.label2.Text = "Size:";
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.Transparent;
+            this.button1.BackgroundImage = global::Recreating_Paint_in_WinForm.Properties.Resources._45101_palette_icon;
+            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Modern No. 20", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.Color.White;
+            this.button1.Location = new System.Drawing.Point(640, 16);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(40, 40);
+            this.button1.TabIndex = 9;
+            this.button1.UseVisualStyleBackColor = false;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.ClientSize = new System.Drawing.Size(1198, 879);
+            this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.picture);
             this.Controls.Add(this.tool_panel);
             this.Controls.Add(this.menuStrip1);
@@ -239,6 +310,8 @@
             this.tool_panel.ResumeLayout(false);
             this.tool_panel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picture)).EndInit();
+            this.statusStrip1.ResumeLayout(false);
+            this.statusStrip1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -261,6 +334,11 @@
         private System.Windows.Forms.Button btn_pickcolor;
         private System.Windows.Forms.Button btn_text;
         private System.Windows.Forms.PictureBox picture;
+        private System.Windows.Forms.StatusStrip statusStrip1;
+        private System.Windows.Forms.ToolStripStatusLabel coordinates;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button button1;
     }
 }
 

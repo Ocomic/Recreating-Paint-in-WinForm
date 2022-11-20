@@ -17,18 +17,19 @@ namespace Recreating_Paint_in_WinForm
         Bitmap bmp;
         Graphics graphics;
         int index;
+        float penSize = 1;
         bool paint = false;
         Point pointX, pointY;
-        Pen DrawPen = new Pen(Color.Black, 1);
+        Pen DrawPen = new Pen(Color.Black);
         Pen eraser = new Pen(Color.White, 10);
-        int x, y, sX, sY, cX, cY;
+        int x, y, sX, sY, clickX, clickY;
+
+        
 
         public Form1()
         {
             InitializeComponent();
 
-            picture.Width = 1300;
-            picture.Height = 800;
             bmp = new Bitmap(picture.Width, picture.Height);
             graphics = Graphics.FromImage(bmp);
             picture.Image = bmp;
@@ -39,10 +40,12 @@ namespace Recreating_Paint_in_WinForm
         private void picture_MouseDown(object sender, MouseEventArgs e)
         {
             paint = true;
-            pointY = e.Location;
+            pointY = e.Location; // X+Y coordinates of click event in the Image/ Picture
 
-            cX = e.X;
-            cY = e.Y;
+            clickX = e.X;
+            clickY = e.Y;
+
+            
         }
 
         private void picture_MouseMove(object sender, MouseEventArgs e)
@@ -54,6 +57,7 @@ namespace Recreating_Paint_in_WinForm
                     pointX = e.Location;
                     graphics.DrawLine(DrawPen, pointX, pointY);
                     pointY = pointX;
+
                 }
 
                 if (index == 2)
@@ -66,8 +70,10 @@ namespace Recreating_Paint_in_WinForm
             picture.Refresh();//without refreshing you won't see the drawings and the image would stay white
             x = e.X;
             y = e.Y;
-            sX = e.X - cX;
-            sY = e.Y - cY;
+            sX = x - clickX;
+            sY = y - clickY;
+
+            coordinates.Text = "Location:" + e.Location + " x:" + x + " y:" + y  +" clickX:" +clickX +" clickY:" +clickY +"sX:" + sX + " sY:" +sY;
         }
 
         private void picture_MouseUp(object sender, MouseEventArgs e)
@@ -81,5 +87,18 @@ namespace Recreating_Paint_in_WinForm
         {
             index = 1;
         }
+        private void btn_eraser_Click(object sender, EventArgs e)
+        {
+            index = 2;
+        }
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            penSize = Convert.ToInt16(comboBox1.SelectedIndex);
+            DrawPen.Width = penSize;
+            eraser.Width = penSize;         
+
+
+        }
+
     }
 }
