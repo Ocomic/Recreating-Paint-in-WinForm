@@ -36,7 +36,7 @@ namespace Recreating_Paint_in_WinForm
             graphics.Clear(Color.White);
 
         }
-
+                
         private void picture_MouseDown(object sender, MouseEventArgs e)
         {
             paint = true;
@@ -48,6 +48,7 @@ namespace Recreating_Paint_in_WinForm
 
 
         }
+        
 
         private void picture_MouseMove(object sender, MouseEventArgs e)
         {
@@ -78,29 +79,53 @@ namespace Recreating_Paint_in_WinForm
             coordinates.Text = "Location:" + e.Location + " x:" + x + " y:" + y  +" clickX:" +clickX +" clickY:" +clickY +"sX:" + sX + " sY:" +sY;
         }
 
+        private void picture_Paint(object sender, PaintEventArgs e)
+        {
+            Graphics graphics = e.Graphics;
+            if (paint)
+            {
+                
+                if (index == 4)
+                {
+                    graphics.DrawRectangle(DrawPen, clickX, clickY, sX, sY);
+                }
+                
+            }
+        }
+
         private void picture_MouseUp(object sender, MouseEventArgs e)
         {
             paint = false;
+
+            if (index == 4)
+            {
+                graphics.DrawRectangle(DrawPen, clickX, clickY, sX, sY);//finalize the drawn rectangle
+            }
         }
         
 
         private void btn_pencil_Click(object sender, EventArgs e)
         {
-            index = 1;
-            
+            index = 1;           
 
         }
         private void btn_eraser_Click(object sender, EventArgs e)
         {
             index = 2;
         }
+        private void btn_fill_Click(object sender, EventArgs e)
+        {
+            index = 3;
+        }
+        private void btnRectangle_Click(object sender, EventArgs e)
+        {
+            index = 4;
+        }
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
             penSize = Convert.ToInt16(comboBox1.SelectedIndex);
             DrawPen.Width = penSize;
-            eraser.Width = penSize;         
-
-
+            eraser.Width = penSize;      
         }
 
     }
