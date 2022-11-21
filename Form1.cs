@@ -44,8 +44,9 @@ namespace Recreating_Paint_in_WinForm
 
             clickX = e.X;
             clickY = e.Y;
+            picture.Cursor = Cursors.Cross;
 
-            
+
         }
 
         private void picture_MouseMove(object sender, MouseEventArgs e)
@@ -55,9 +56,10 @@ namespace Recreating_Paint_in_WinForm
                 if (index == 1)
                 {
                     pointX = e.Location;
+                    graphics.SmoothingMode = System.Drawing.Drawing2D.SmoothingMode.AntiAlias;
+                    DrawPen.StartCap = DrawPen.EndCap = System.Drawing.Drawing2D.LineCap.Round;
                     graphics.DrawLine(DrawPen, pointX, pointY);
-                    pointY = pointX;
-
+                    pointY = pointX;                    
                 }
 
                 if (index == 2)
@@ -80,12 +82,13 @@ namespace Recreating_Paint_in_WinForm
         {
             paint = false;
         }
-
-
+        
 
         private void btn_pencil_Click(object sender, EventArgs e)
         {
             index = 1;
+            
+
         }
         private void btn_eraser_Click(object sender, EventArgs e)
         {
