@@ -149,5 +149,15 @@ namespace Recreating_Paint_in_WinForm.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _8726558_triangle_icon {
+            get {
+                object obj = ResourceManager.GetObject("8726558_triangle_icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
     }
 }

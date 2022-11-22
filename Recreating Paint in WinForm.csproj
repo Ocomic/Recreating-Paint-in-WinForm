@@ -107,5 +107,8 @@
   <ItemGroup>
     <None Include="Resources\3440910_ecommerce_find_magnifier_search_seo_icon.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\8726558_triangle_icon.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

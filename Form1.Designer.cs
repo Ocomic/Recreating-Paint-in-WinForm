@@ -35,24 +35,27 @@
             this.saveToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.viewToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tool_panel = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.btn_magnifier = new System.Windows.Forms.Button();
-            this.btn_pickcolor = new System.Windows.Forms.Button();
             this.btn_text = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
+            this.statusStrip1 = new System.Windows.Forms.StatusStrip();
+            this.coordinates = new System.Windows.Forms.ToolStripStatusLabel();
+            this.picture = new System.Windows.Forms.PictureBox();
+            this.triangleBtn = new System.Windows.Forms.Button();
+            this.lineBtn = new System.Windows.Forms.Button();
+            this.ellipseBtn = new System.Windows.Forms.Button();
+            this.btnRectangle = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.btn_magnifier = new System.Windows.Forms.Button();
+            this.btn_pickcolor = new System.Windows.Forms.Button();
             this.btn_eraser = new System.Windows.Forms.Button();
             this.btn_fill = new System.Windows.Forms.Button();
             this.btn_pencil = new System.Windows.Forms.Button();
-            this.picture = new System.Windows.Forms.PictureBox();
-            this.statusStrip1 = new System.Windows.Forms.StatusStrip();
-            this.coordinates = new System.Windows.Forms.ToolStripStatusLabel();
-            this.btnRectangle = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             this.tool_panel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picture)).BeginInit();
             this.statusStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picture)).BeginInit();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -65,7 +68,7 @@
             this.viewToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1797, 36);
+            this.menuStrip1.Size = new System.Drawing.Size(1797, 38);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -79,7 +82,7 @@
             this.fileToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.fileToolStripMenuItem.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
-            this.fileToolStripMenuItem.Size = new System.Drawing.Size(58, 32);
+            this.fileToolStripMenuItem.Size = new System.Drawing.Size(58, 34);
             this.fileToolStripMenuItem.Text = "File";
             // 
             // newToolStripMenuItem
@@ -105,12 +108,15 @@
             this.viewToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.viewToolStripMenuItem.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.viewToolStripMenuItem.Name = "viewToolStripMenuItem";
-            this.viewToolStripMenuItem.Size = new System.Drawing.Size(69, 32);
+            this.viewToolStripMenuItem.Size = new System.Drawing.Size(69, 34);
             this.viewToolStripMenuItem.Text = "View";
             // 
             // tool_panel
             // 
             this.tool_panel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.tool_panel.Controls.Add(this.triangleBtn);
+            this.tool_panel.Controls.Add(this.lineBtn);
+            this.tool_panel.Controls.Add(this.ellipseBtn);
             this.tool_panel.Controls.Add(this.btnRectangle);
             this.tool_panel.Controls.Add(this.button1);
             this.tool_panel.Controls.Add(this.label2);
@@ -123,34 +129,18 @@
             this.tool_panel.Controls.Add(this.btn_fill);
             this.tool_panel.Controls.Add(this.btn_pencil);
             this.tool_panel.Dock = System.Windows.Forms.DockStyle.Top;
-            this.tool_panel.Location = new System.Drawing.Point(0, 36);
+            this.tool_panel.Location = new System.Drawing.Point(0, 38);
             this.tool_panel.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tool_panel.Name = "tool_panel";
             this.tool_panel.Size = new System.Drawing.Size(1797, 220);
             this.tool_panel.TabIndex = 1;
-            // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.Transparent;
-            this.button1.BackgroundImage = global::Recreating_Paint_in_WinForm.Properties.Resources._45101_palette_icon;
-            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Modern No. 20", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(960, 25);
-            this.button1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(60, 62);
-            this.button1.TabIndex = 9;
-            this.button1.UseVisualStyleBackColor = false;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label2.Location = new System.Drawing.Point(744, 25);
+            this.label2.Location = new System.Drawing.Point(1072, 24);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(66, 29);
@@ -168,41 +158,13 @@
             "100",
             "200",
             "500"});
-            this.comboBox1.Location = new System.Drawing.Point(744, 62);
+            this.comboBox1.Location = new System.Drawing.Point(1072, 61);
             this.comboBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(180, 28);
             this.comboBox1.TabIndex = 7;
             this.comboBox1.Text = "1";
             this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
-            // 
-            // btn_magnifier
-            // 
-            this.btn_magnifier.BackColor = System.Drawing.Color.Transparent;
-            this.btn_magnifier.BackgroundImage = global::Recreating_Paint_in_WinForm.Properties.Resources._3440910_ecommerce_find_magnifier_search_seo_icon;
-            this.btn_magnifier.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btn_magnifier.FlatAppearance.BorderSize = 0;
-            this.btn_magnifier.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_magnifier.Location = new System.Drawing.Point(612, 98);
-            this.btn_magnifier.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.btn_magnifier.Name = "btn_magnifier";
-            this.btn_magnifier.Size = new System.Drawing.Size(60, 62);
-            this.btn_magnifier.TabIndex = 6;
-            this.btn_magnifier.UseVisualStyleBackColor = false;
-            // 
-            // btn_pickcolor
-            // 
-            this.btn_pickcolor.BackColor = System.Drawing.Color.Transparent;
-            this.btn_pickcolor.BackgroundImage = global::Recreating_Paint_in_WinForm.Properties.Resources._3380386_eye_dropper_pipette_color_medical_icon;
-            this.btn_pickcolor.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btn_pickcolor.FlatAppearance.BorderSize = 0;
-            this.btn_pickcolor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_pickcolor.Location = new System.Drawing.Point(540, 98);
-            this.btn_pickcolor.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.btn_pickcolor.Name = "btn_pickcolor";
-            this.btn_pickcolor.Size = new System.Drawing.Size(60, 62);
-            this.btn_pickcolor.TabIndex = 5;
-            this.btn_pickcolor.UseVisualStyleBackColor = false;
             // 
             // btn_text
             // 
@@ -231,6 +193,142 @@
             this.label1.Size = new System.Drawing.Size(75, 29);
             this.label1.TabIndex = 3;
             this.label1.Text = "Tools";
+            // 
+            // statusStrip1
+            // 
+            this.statusStrip1.ImageScalingSize = new System.Drawing.Size(24, 24);
+            this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.coordinates});
+            this.statusStrip1.Location = new System.Drawing.Point(0, 1320);
+            this.statusStrip1.Name = "statusStrip1";
+            this.statusStrip1.Padding = new System.Windows.Forms.Padding(2, 0, 21, 0);
+            this.statusStrip1.Size = new System.Drawing.Size(1797, 32);
+            this.statusStrip1.TabIndex = 3;
+            this.statusStrip1.Text = "statusStrip1";
+            // 
+            // coordinates
+            // 
+            this.coordinates.Name = "coordinates";
+            this.coordinates.Size = new System.Drawing.Size(33, 25);
+            this.coordinates.Text = "XY";
+            // 
+            // picture
+            // 
+            this.picture.BackColor = System.Drawing.Color.White;
+            this.picture.Location = new System.Drawing.Point(12, 271);
+            this.picture.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.picture.Name = "picture";
+            this.picture.Size = new System.Drawing.Size(1372, 923);
+            this.picture.TabIndex = 2;
+            this.picture.TabStop = false;
+            this.picture.Paint += new System.Windows.Forms.PaintEventHandler(this.picture_Paint);
+            this.picture.MouseDown += new System.Windows.Forms.MouseEventHandler(this.picture_MouseDown);
+            this.picture.MouseMove += new System.Windows.Forms.MouseEventHandler(this.picture_MouseMove);
+            this.picture.MouseUp += new System.Windows.Forms.MouseEventHandler(this.picture_MouseUp);
+            // 
+            // triangleBtn
+            // 
+            this.triangleBtn.BackColor = System.Drawing.Color.Transparent;
+            this.triangleBtn.BackgroundImage = global::Recreating_Paint_in_WinForm.Properties.Resources._8726558_triangle_icon;
+            this.triangleBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.triangleBtn.FlatAppearance.BorderSize = 0;
+            this.triangleBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.triangleBtn.Location = new System.Drawing.Point(688, 104);
+            this.triangleBtn.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.triangleBtn.Name = "triangleBtn";
+            this.triangleBtn.Size = new System.Drawing.Size(60, 62);
+            this.triangleBtn.TabIndex = 13;
+            this.triangleBtn.UseVisualStyleBackColor = false;
+            this.triangleBtn.Click += new System.EventHandler(this.triangleBtn_Click);
+            // 
+            // lineBtn
+            // 
+            this.lineBtn.BackColor = System.Drawing.Color.Transparent;
+            this.lineBtn.BackgroundImage = global::Recreating_Paint_in_WinForm.Properties.Resources._8726075_line_alt_icon;
+            this.lineBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.lineBtn.FlatAppearance.BorderSize = 0;
+            this.lineBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lineBtn.Location = new System.Drawing.Point(848, 24);
+            this.lineBtn.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.lineBtn.Name = "lineBtn";
+            this.lineBtn.Size = new System.Drawing.Size(60, 62);
+            this.lineBtn.TabIndex = 12;
+            this.lineBtn.UseVisualStyleBackColor = false;
+            this.lineBtn.Click += new System.EventHandler(this.lineBtn_Click);
+            // 
+            // ellipseBtn
+            // 
+            this.ellipseBtn.BackColor = System.Drawing.Color.Transparent;
+            this.ellipseBtn.BackgroundImage = global::Recreating_Paint_in_WinForm.Properties.Resources._79641_draw_ellipse_icon;
+            this.ellipseBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.ellipseBtn.FlatAppearance.BorderSize = 0;
+            this.ellipseBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ellipseBtn.Location = new System.Drawing.Point(768, 24);
+            this.ellipseBtn.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.ellipseBtn.Name = "ellipseBtn";
+            this.ellipseBtn.Size = new System.Drawing.Size(60, 62);
+            this.ellipseBtn.TabIndex = 11;
+            this.ellipseBtn.UseVisualStyleBackColor = false;
+            this.ellipseBtn.Click += new System.EventHandler(this.ellipseBtn_Click);
+            // 
+            // btnRectangle
+            // 
+            this.btnRectangle.BackColor = System.Drawing.Color.Transparent;
+            this.btnRectangle.BackgroundImage = global::Recreating_Paint_in_WinForm.Properties.Resources._79511_draw_rectangle_icon;
+            this.btnRectangle.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnRectangle.FlatAppearance.BorderSize = 0;
+            this.btnRectangle.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRectangle.Location = new System.Drawing.Point(688, 24);
+            this.btnRectangle.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnRectangle.Name = "btnRectangle";
+            this.btnRectangle.Size = new System.Drawing.Size(60, 62);
+            this.btnRectangle.TabIndex = 10;
+            this.btnRectangle.UseVisualStyleBackColor = false;
+            this.btnRectangle.Click += new System.EventHandler(this.btnRectangle_Click);
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.Transparent;
+            this.button1.BackgroundImage = global::Recreating_Paint_in_WinForm.Properties.Resources._45101_palette_icon;
+            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Modern No. 20", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.Color.White;
+            this.button1.Location = new System.Drawing.Point(1072, 112);
+            this.button1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(60, 62);
+            this.button1.TabIndex = 9;
+            this.button1.UseVisualStyleBackColor = false;
+            // 
+            // btn_magnifier
+            // 
+            this.btn_magnifier.BackColor = System.Drawing.Color.Transparent;
+            this.btn_magnifier.BackgroundImage = global::Recreating_Paint_in_WinForm.Properties.Resources._3440910_ecommerce_find_magnifier_search_seo_icon;
+            this.btn_magnifier.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btn_magnifier.FlatAppearance.BorderSize = 0;
+            this.btn_magnifier.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_magnifier.Location = new System.Drawing.Point(612, 98);
+            this.btn_magnifier.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btn_magnifier.Name = "btn_magnifier";
+            this.btn_magnifier.Size = new System.Drawing.Size(60, 62);
+            this.btn_magnifier.TabIndex = 6;
+            this.btn_magnifier.UseVisualStyleBackColor = false;
+            // 
+            // btn_pickcolor
+            // 
+            this.btn_pickcolor.BackColor = System.Drawing.Color.Transparent;
+            this.btn_pickcolor.BackgroundImage = global::Recreating_Paint_in_WinForm.Properties.Resources._3380386_eye_dropper_pipette_color_medical_icon;
+            this.btn_pickcolor.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btn_pickcolor.FlatAppearance.BorderSize = 0;
+            this.btn_pickcolor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_pickcolor.Location = new System.Drawing.Point(540, 98);
+            this.btn_pickcolor.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btn_pickcolor.Name = "btn_pickcolor";
+            this.btn_pickcolor.Size = new System.Drawing.Size(60, 62);
+            this.btn_pickcolor.TabIndex = 5;
+            this.btn_pickcolor.UseVisualStyleBackColor = false;
             // 
             // btn_eraser
             // 
@@ -277,53 +375,6 @@
             this.btn_pencil.UseVisualStyleBackColor = false;
             this.btn_pencil.Click += new System.EventHandler(this.btn_pencil_Click);
             // 
-            // picture
-            // 
-            this.picture.BackColor = System.Drawing.Color.White;
-            this.picture.Location = new System.Drawing.Point(12, 271);
-            this.picture.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.picture.Name = "picture";
-            this.picture.Size = new System.Drawing.Size(1372, 923);
-            this.picture.TabIndex = 2;
-            this.picture.TabStop = false;
-            this.picture.Paint += new System.Windows.Forms.PaintEventHandler(this.picture_Paint);
-            this.picture.MouseDown += new System.Windows.Forms.MouseEventHandler(this.picture_MouseDown);
-            this.picture.MouseMove += new System.Windows.Forms.MouseEventHandler(this.picture_MouseMove);
-            this.picture.MouseUp += new System.Windows.Forms.MouseEventHandler(this.picture_MouseUp);
-            // 
-            // statusStrip1
-            // 
-            this.statusStrip1.ImageScalingSize = new System.Drawing.Size(24, 24);
-            this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.coordinates});
-            this.statusStrip1.Location = new System.Drawing.Point(0, 1320);
-            this.statusStrip1.Name = "statusStrip1";
-            this.statusStrip1.Padding = new System.Windows.Forms.Padding(2, 0, 21, 0);
-            this.statusStrip1.Size = new System.Drawing.Size(1797, 32);
-            this.statusStrip1.TabIndex = 3;
-            this.statusStrip1.Text = "statusStrip1";
-            // 
-            // coordinates
-            // 
-            this.coordinates.Name = "coordinates";
-            this.coordinates.Size = new System.Drawing.Size(33, 25);
-            this.coordinates.Text = "XY";
-            // 
-            // btnRectangle
-            // 
-            this.btnRectangle.BackColor = System.Drawing.Color.Transparent;
-            this.btnRectangle.BackgroundImage = global::Recreating_Paint_in_WinForm.Properties.Resources._79511_draw_rectangle_icon;
-            this.btnRectangle.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnRectangle.FlatAppearance.BorderSize = 0;
-            this.btnRectangle.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnRectangle.Location = new System.Drawing.Point(744, 96);
-            this.btnRectangle.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.btnRectangle.Name = "btnRectangle";
-            this.btnRectangle.Size = new System.Drawing.Size(60, 62);
-            this.btnRectangle.TabIndex = 10;
-            this.btnRectangle.UseVisualStyleBackColor = false;
-            this.btnRectangle.Click += new System.EventHandler(this.btnRectangle_Click);
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -343,9 +394,9 @@
             this.menuStrip1.PerformLayout();
             this.tool_panel.ResumeLayout(false);
             this.tool_panel.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picture)).EndInit();
             this.statusStrip1.ResumeLayout(false);
             this.statusStrip1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picture)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -374,6 +425,9 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button btnRectangle;
+        private System.Windows.Forms.Button ellipseBtn;
+        private System.Windows.Forms.Button triangleBtn;
+        private System.Windows.Forms.Button lineBtn;
     }
 }
 

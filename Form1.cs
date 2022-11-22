@@ -89,18 +89,59 @@ namespace Recreating_Paint_in_WinForm
                 {
                     graphics.DrawRectangle(DrawPen, clickX, clickY, sX, sY);
                 }
-                
+                if (index == 5)
+                {
+                    graphics.DrawEllipse(DrawPen, clickX, clickY, sX, sY);
+                }
+                if (index == 6)
+                {
+                    graphics.DrawLine(DrawPen, clickX, clickY, x, y);
+                }
+                if (index == 7)
+                {
+                    PointF[] triangle = new PointF[]
+                {
+                    new PointF(clickX, clickY),
+                    new PointF(sY, sX),
+                    new PointF(clickX +sX, clickY +sY),
+
+                };
+                    graphics.DrawPolygon(DrawPen, triangle);
+                }
+
             }
         }
 
+        
         private void picture_MouseUp(object sender, MouseEventArgs e)
         {
             paint = false;
 
             if (index == 4)
             {
-                graphics.DrawRectangle(DrawPen, clickX, clickY, sX, sY);//finalize the drawn rectangle
+                graphics.DrawRectangle(DrawPen, clickX, clickY, sX, sY);//show shape on the picture to see what you draw
             }
+            if (index == 5)
+            {
+                graphics.DrawEllipse(DrawPen, clickX, clickY, sX, sY);
+            }
+            if (index == 6)
+            {
+                graphics.DrawLine(DrawPen, clickX, clickY, x, y);
+            }
+            if (index == 7)
+            {
+                PointF[] triangle = new PointF[]
+                {
+                    new PointF(clickX, clickY),
+                    new PointF(sY, sX),
+                    new PointF(clickX +sX, clickY +sY),
+
+                };
+
+                graphics.DrawPolygon(DrawPen,triangle);
+            }
+
         }
         
 
@@ -120,6 +161,20 @@ namespace Recreating_Paint_in_WinForm
         private void btnRectangle_Click(object sender, EventArgs e)
         {
             index = 4;
+        }
+        private void ellipseBtn_Click(object sender, EventArgs e)
+        {
+            index = 5;
+        }
+
+        private void lineBtn_Click(object sender, EventArgs e)
+        {
+            index = 6;
+        }
+
+        private void triangleBtn_Click(object sender, EventArgs e)
+        {
+            index = 7;
         }
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {

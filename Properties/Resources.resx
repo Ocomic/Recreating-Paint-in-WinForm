@@ -133,6 +133,9 @@
   <data name="46845_documents_draft_eraser_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\46845_documents_draft_eraser_icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="3440910_ecommerce_find_magnifier_search_seo_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\3440910_ecommerce_find_magnifier_search_seo_icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="285638_pencil_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\285638_pencil_icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -142,7 +145,7 @@
   <data name="79511_draw_rectangle_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\79511_draw_rectangle_icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="3440910_ecommerce_find_magnifier_search_seo_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\3440910_ecommerce_find_magnifier_search_seo_icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="8726558_triangle_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\8726558_triangle_icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>
